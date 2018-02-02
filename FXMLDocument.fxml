@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="mMainMenu" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pong.game.FXMLDocumentController">
+   <children>
+      <GridPane fx:id="mMainMenuGridPane" layoutX="26.0" prefHeight="600.0" prefWidth="750.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="mMainMenuLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Main Menu" GridPane.columnIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="mDifficultyButton" alignment="CENTER" maxHeight="50.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#difficultybutton" text="Select Difficulty" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="mStartButton" alignment="CENTER" maxHeight="50.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#startbutton" text="Start Pong!" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="mExitButton" maxHeight="50.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exitbutton" text="Exit Game" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ChoiceBox fx:id="mInputMethod" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="mDifficultyGridPane" prefHeight="600.0" prefWidth="750.0" visible="false">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="mEasyButton" maxHeight="50.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#easybutton" text="EASY" textFill="#39dd13" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="mMediumButton" alignment="CENTER" maxHeight="50.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#mediumbutton" text="MEDIUM" textFill="#f5be25" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="mHardButton" maxHeight="50.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#hardbutton" text="HARD" textFill="#ff4d00" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="mMainMenuButton" maxHeight="50.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#mainmenubutton" text="Main Menu" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <GridPane fx:id="mGamePane" onKeyPressed="#trymovingrect" onMouseMoved="#trymovingrect2" prefHeight="600.0" prefWidth="750.0" visible="false">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Circle fx:id="mPongBall" fill="DODGERBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Rectangle fx:id="mRacket1" arcHeight="5.0" arcWidth="5.0" fill="#4c5761" height="150.0" stroke="BLACK" strokeType="INSIDE" width="20.0" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Rectangle>
+            <Rectangle fx:id="mRacket2" arcHeight="5.0" arcWidth="5.0" fill="#4c5761" height="150.0" stroke="BLACK" strokeType="INSIDE" width="20.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="90.0" />
+               </GridPane.margin>
+            </Rectangle>
+            <Button fx:id="mMainMenuButton2" alignment="CENTER" mnemonicParsing="false" onAction="#mainmenubutton" prefHeight="30.0" prefWidth="125.0" text="Main Menu" GridPane.valignment="TOP">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Score" wrappingWidth="45.0947265625" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="mLeftScore" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="mRightScore" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Line fx:id="mTopBoundary" endX="750.0" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="-5.0" />
+               </GridPane.margin>
+            </Line>
+            <Button fx:id="mPauseResumeButton" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#pauseresumebutton" prefHeight="23.0" prefWidth="125.0" text="Pause/Resume">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets top="-5.0" />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
