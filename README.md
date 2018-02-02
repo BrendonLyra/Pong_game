@@ -15,4 +15,6 @@ Improve difficulty settings.
 
 Randomize start speed of ball, and direction. 
 
+Add sounds to the game.
 
+Make Keyboard inputs more fluid for bar movements.
