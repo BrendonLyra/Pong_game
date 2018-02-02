@@ -8,7 +8,7 @@ Stop bar from moving out of bounds if mouse moves out of bounds.
 
 When ball hits top of bar, it does not bounce off of it. 
 
-
+\n
 
 Improvements to be made: 
 
